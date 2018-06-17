@@ -6,7 +6,6 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const path = require('path');
 
-const router = express.Router();
 const app = express()
 const uristring = process.env.MONGODB_URI || 'mongodb://localhost/ExpertSystem';
 
@@ -17,7 +16,8 @@ app.set('view engine', 'html');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-router.use(express.static(__dirname + '/assets'))
+app.use(express.static(__dirname + '/assets'))
+
 
 mongoose.connect(uristring, (err, res) => {
     if (err) {
@@ -36,7 +36,12 @@ const options = {
 app.listen(options.port, () => console.log(`Example app listening on port ${options.port}!`))
 
 
-// respond with "hello world" when a GET request is made to the homepage
+// request is made to the homepage
 app.get('/', function (req, res) {
     res.sendFile(__dirname + '/views/index.html')
+})
+
+// request is made to the systempage
+app.get('/system', function (req, res) {
+    res.sendFile(__dirname + '/views/system.html')
 })
