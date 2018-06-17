@@ -30,13 +30,44 @@ body {
     padding-top: 30vh;
 }
 
-h1 {
+.container h1,
+.container h2,
+.container p,
+.container li {
     color: #fff;
-    position: relative;
-    font-size: 60px;
     text-shadow: -1px 0 black,
                 0 1px black,
                 1px 0 black,
                 0 -1px black;
+}
+
+h1 {
+    position: relative;
+    font-size: 60px;
     font-weight: 900;
+}
+
+#app {
+    position: relative;
+    text-align: center;
+    border-radius: 5px;
+    background: rgba(256, 256, 256, .5);
+    padding: 30px 60px;
+    margin-top: 60px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+label {
+    position: relative;
+    margin: 10px;
+    width: 50%;
+}
+
+.drums {
+    height: 45vh;
+    margin-top: 20px;
 }
