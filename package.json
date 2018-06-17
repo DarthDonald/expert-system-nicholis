@@ -1,0 +1,23 @@
+{
+  "name": "letyblog-telegram-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "engines": {
+    "node": ">=4.1.1",
+    "npm": ">=2.1.x"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "bulma": "^0.7.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "mongoose": ">=4.1.11"
+  }
+}
